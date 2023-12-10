@@ -8,9 +8,10 @@ class Solution {
     }
     
     public int[] solution(int[] arr) {
-        // arr에서 최소값의 인덱스 찾기
-        // arr를 arraylist로 바꾼 후, 최소값 제거
+        // arr에서 최소값 찾기
+        // Stream을 사용하여 arr의 최소값 제거
         // 만약 arr의 길이가 1이면 -1을 반환 
+        
         int[] copyArr = arr.clone();
         Arrays.sort(copyArr);
         
