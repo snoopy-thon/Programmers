@@ -10,12 +10,12 @@ class Solution {
         for(int i=0; i<n; i++){
             answer[i] = "";
             String result = Integer.toBinaryString(arr1[i] | arr2[i]);
-            tmp[i] = result;
-            if(tmp[i].length() < n){
-                for(int k=tmp[i].length(); k<n; k++){
-                    tmp[i] = " " + tmp[i];
-                }
-            }
+            tmp[i] = String.format("%"+ n +"s",result);
+            // if(tmp[i].length() < n){
+            //     for(int k=tmp[i].length(); k<n; k++){
+            //         tmp[i] = " " + tmp[i];
+            //     }
+            // }
             
             for(int j=0; j<tmp[i].length(); j++){
                 if(tmp[i].charAt(j) == '1'){
