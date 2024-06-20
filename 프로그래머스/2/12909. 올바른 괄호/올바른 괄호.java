@@ -1,6 +1,5 @@
-import java.util.*;
-
 class Solution {
+    
     boolean solution(String s) {
        boolean answer = false;
         int count = 0;
@@ -21,4 +20,5 @@ class Solution {
 
         return answer;
     }
+
 }
