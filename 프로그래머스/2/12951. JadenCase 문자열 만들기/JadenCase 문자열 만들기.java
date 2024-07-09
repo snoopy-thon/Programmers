@@ -13,35 +13,20 @@ class Solution {
             char currentChar = s.charAt(i);
             
             if(currentChar == ' '){
-                index = 0;
+                index = 1;
                 answer.append(currentChar);
-                index++;
                 continue;
             }
             
             if(index == 1){
-                answer.append(changeToUpper(currentChar));
+                answer.append(Character.toUpperCase(currentChar));
             }else {
-                answer.append(changeToLower(currentChar));
+                answer.append(Character.toLowerCase(currentChar));
             }
             index++;
         }
         return answer.toString();
     }
     
-    // 대문자 변환 함수
-    public char changeToUpper(char c){
-        if(c >= 'a' && c <='z'){
-            return (char)(c - 32);
-        }
-        return c;
-    }
-    
-    // 소문자 변환 함수
-    public char changeToLower(char c){
-        if(c >= 'A' && c <='Z'){
-            return (char)(c + 32);
-        }
-        return c;
-    }
+   
 }
